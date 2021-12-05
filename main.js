@@ -32,6 +32,11 @@ function handleStepEnter(response) {
 	ballC.style.height = `${el.dataset.countries}px`;
   ballO.style.width = `${el.dataset.others}px`;
 	ballO.style.height = `${el.dataset.others}px`;
+
+  if(el.id === 'alert') {
+    console.log('This year ICANN decided to open up domain system for new application.');
+    // window.alert('This year ICANN decided to open up domain system for new application.')
+  }
 }
 
 function handleStepExit(response) {
