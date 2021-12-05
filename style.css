@@ -67,6 +67,7 @@ article {
   text-shadow: 2px 2px #000;
   font-size: 1.25rem;
   width: 85vw;
+  visibility: hidden;
 }
 
 #countries-count::before {
@@ -78,12 +79,14 @@ article {
   top: 33%;
   margin-top: 30px;
   text-shadow: 2px 2px #2700ff;
+  white-space: nowrap;
 }
 
 #others-count {
   top: 50%;
   margin-top: 30px;
   text-shadow: 2px 2px red;
+  white-space: nowrap;
 }
 
 #others-count::before {
@@ -138,7 +141,7 @@ article {
 }
 
 .step {
-  margin: 0 auto 90vh auto;
+  margin: 0 auto 10vh auto;
   padding: .25rem;
   /* border: 2px solid #f3f3f3; */
   opacity: 0.5;
@@ -182,4 +185,5 @@ article {
   font-size: 2rem;
     font-style: initial;
     font-family: sans-serif;
+    display: none;
 }
