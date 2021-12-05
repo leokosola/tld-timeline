@@ -16,6 +16,8 @@ function handleStepEnter(response) {
   steps.forEach((step) => step.style.opacity = .2);
   el.style.opacity = 1;
 
+  document.querySelector("#ots").innerText = "";
+
   // steps.forEach((step) => step.classList.remove("is-active"));
   // el.classList.add("is-active");
 
@@ -42,8 +44,8 @@ function init() {
   scroller
     .setup({
       step: "#scrolly article .step",
-      offset: 0.8,
-      debug: false,
+      offset: 0.9,
+      debug: true,
     })
     .onStepEnter(handleStepEnter)
     .onStepExit(handleStepExit);
