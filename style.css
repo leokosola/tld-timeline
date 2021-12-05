@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-
+  transition: all .5s linear;
 }
 
 html, body {
@@ -18,6 +18,16 @@ body {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+article {
+  margin-left: 10px;
+  border-left: white dotted 5px;
+}
+
+#ots {
+  background: #e6e6e6;
+  z-index: 10;
 }
 
 .ball {
@@ -40,7 +50,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #ball-other {
   background: red;
-  top: 66%;
+  top: 50%;
 }
 
 .count {
@@ -53,17 +63,32 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #total-count {
-  top: 50%;
+  top: 80%;
+  text-shadow: 2px 2px #000;
+  font-size: 1.25rem;
+  width: 85vw;
+}
+
+#countries-count::before {
+  content: 'geographic: ';
+  color: #fff;
 }
 
 #countries-count {
   top: 33%;
+  margin-top: 30px;
   text-shadow: 2px 2px #2700ff;
 }
 
 #others-count {
-  top: 66%;
+  top: 50%;
+  margin-top: 30px;
   text-shadow: 2px 2px red;
+}
+
+#others-count::before {
+  content: 'generic: ';
+  color: #fff;
 }
 
 #intro {
@@ -113,8 +138,8 @@ article {
 }
 
 .step {
-  margin: 2rem auto 24rem auto;
-  padding: 1rem;
+  margin: 0 auto 90vh auto;
+  padding: .25rem;
   /* border: 2px solid #f3f3f3; */
   opacity: 0.5;
   /* background: #fff; */
@@ -124,7 +149,10 @@ article {
 
 .step p {
   margin: 0.5rem auto;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 5rem; 
+  color: white;
+  font-style: italic;
 }
 
 /* .is-active {
@@ -148,4 +176,10 @@ article {
   height: 100px;
   transform: rotate(90deg);
   transform-origin: right top;
+}
+
+.step p.domains {
+  font-size: 2rem;
+    font-style: initial;
+    font-family: sans-serif;
 }
